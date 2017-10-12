@@ -1,12 +1,15 @@
 ---
-- name: Create VM with defaults
-  azure_rm_virtualmachine:
-    resource_group: Testing
-    name: testvm10
-    admin_username: "{{ linux_username }}"
-    admin_password: '53KS5gXT-y-M----'
-    image:
-      offer: CentOS
-      publisher: OpenLogic
-      sku: '7.1'
-      version: latest
+- name: This is a test playbook
+  hosts: localhost
+  tasks:
+    - name: Create VM with defaults
+      azure_rm_virtualmachine:
+        resource_group: Testing
+        name: testvm10
+        admin_username: "{{ linux_username }}"
+        admin_password: '53KS5gXT-y-M----'
+        image:
+          offer: CentOS
+          publisher: OpenLogic
+          sku: '7.1'
+          version: latest
