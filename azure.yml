@@ -4,7 +4,7 @@
     resource_group: Testing
     name: testvm10
     admin_username: "{{ linux_username }}"
-    admin_password: "<your password here>"
+    admin_password: '53KS5gXT-y-M----'
     image:
       offer: CentOS
       publisher: OpenLogic
