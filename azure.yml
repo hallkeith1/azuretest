@@ -12,4 +12,4 @@
           offer: CentOS
           publisher: OpenLogic
           sku: '7.1'
-          version: latest
+          version: 7.1.20160308
