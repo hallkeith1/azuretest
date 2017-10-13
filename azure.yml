@@ -8,7 +8,7 @@
         name: testvm10
         admin_username: "{{ linux_username }}"
         admin_password: '53KS5gXT-y-M----'
-        vm_size: "Standard_D1V2"
+        vm_size: "Standard_D1_v2"
         image:
           offer: CentOS
           publisher: OpenLogic
