@@ -3,4 +3,4 @@
   hosts: "ca01a2648.atsna.atsauto.net"
   tasks:
     - name: Run the PowerCLI script to start the shutdown
-      win_shell: C:\temp\VMWareShutdown.ps1 {{ ordered_hosts }} {{ vcenter }}
+      win_shell: & "C:\temp\VMWareShutdown.ps1" {{ ordered_hosts }} {{ vcenter }}
