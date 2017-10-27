@@ -1,0 +1,6 @@
+---
+- name: Startup VMs using PowerCLI
+  hosts: "ca01a2648.atsna.atsauto.net"
+  tasks:
+    - name: Run the PowerCLI script to start the startup
+      win_shell: C:\temp\VMWareStartup.ps1 {{ ordered_hosts }} {{ vcenter }} {{ vm_hosts }}
