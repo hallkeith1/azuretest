@@ -5,5 +5,9 @@
 
   tasks:
   - name: RunRanorexCommand
-    win_command: c:\pstools\psexec.exe -s -accepteula -i 1 {{ testexe }} {{ testparam }}
+    #win_command: c:\pstools\psexec.exe -s -accepteula -i 1 {{ testexe }} {{ testparam }}
     #win_command: schtasks.exe /Run /TN {{ testparam }}
+    win_psexec
+      command: "{{ testexe }} {{ testparam }}"
+      interactive: yes
+      system: no
