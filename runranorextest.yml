@@ -5,4 +5,4 @@
 
   tasks:
   - name: RunRanorexCommand
-    win_command: {{ testexe }} {{ testparam }}
+    win_command: "{{ testexe }} {{ testparam }}"
