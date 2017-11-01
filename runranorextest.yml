@@ -5,4 +5,4 @@
 
   tasks:
   - name: RunRanorexCommand
-    win_command: "c:\pstools\psexec.exe -accepteula -i 0 {{ testexe }} {{ testparam }}"
+    win_command: 'c:\pstools\psexec.exe -accepteula -i 0' "{{ testexe }} {{ testparam }}"
