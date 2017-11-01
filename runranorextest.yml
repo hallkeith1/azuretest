@@ -11,3 +11,4 @@
       command: "{{ testexe }} {{ testparam }}"
       interactive: yes
       system: no
+      executable: C:\PsTools\PsExec.exe
