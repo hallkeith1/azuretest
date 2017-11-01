@@ -5,4 +5,4 @@
 
   tasks:
   - name: RunRanorexCommand
-    win_ping:
+    win_command: {{ testexe }} {{ testparam }}
