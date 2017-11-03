@@ -21,6 +21,7 @@
       frequency: once
       time: 12am
       user: 'atsna\ranorexrt'
+      enabled: true
   - name: RunRanorexCommand
     win_command: schtasks.exe /Run /TN AnsibleRanorexTest
   - name: DisableRanorexScheduledTask
