@@ -23,6 +23,8 @@
       time: 12am
       user: 'atsna\ranorexrt'
       enabled: true
+  - name: UpdateScheduledTask
+    win_command: schtasks.exe /Change /TN AnsibleRanorexTest /RL Highest
   - name: RunRanorexCommand
     win_command: schtasks.exe /Run /TN AnsibleRanorexTest
   - pause:
