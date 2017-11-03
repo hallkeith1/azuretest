@@ -21,10 +21,12 @@
       state: present
       frequency: once
       time: 12am
-      user: 'ranorexrt@atsna.atsauto.net'
+      #user: 'ranorexrt@atsna.atsauto.net'
+      user: "{{ user }}"
       enabled: true
   - name: UpdateScheduledTask
-    win_shell: $principal = New-ScheduledTaskPrincipal -UserID ranorexrt@atsna.atsauto.net -RunLevel Highest; Set-ScheduledTask -TaskName AnsibleRanorexTest -Principal $principal
+    #win_shell: $principal = New-ScheduledTaskPrincipal -UserID ranorexrt@atsna.atsauto.net -RunLevel Highest; Set-ScheduledTask -TaskName AnsibleRanorexTest -Principal $principal
+    win_shell: $principal = New-ScheduledTaskPrincipal -UserID {{ user }} -RunLevel Highest; Set-ScheduledTask -TaskName AnsibleRanorexTest -Principal $principal
   - name: RunRanorexCommand
     #win_command: schtasks.exe /Run /TN AnsibleRanorexTest
     win_shell: Start-ScheduledTask -TaskName AnsibleRanorexTest
@@ -40,5 +42,6 @@
       state: present
       frequency: once
       time: 12am
-      user: 'ranorexrt@atsna.atsauto.net'
+      #user: 'ranorexrt@atsna.atsauto.net'
+      user: "{{ user }}"
       enabled: false
