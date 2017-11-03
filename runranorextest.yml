@@ -24,10 +24,10 @@
       user: 'ranorexrt@atsna.atsauto.net'
       enabled: true
   - name: UpdateScheduledTask
-    win_command: PowerShell -Command {$principal = New-ScheduledTaskPrincipal -UserID ranorexrt@atsna.atsauto.net -RunLevel Highest; Set-ScheduledTask -TaskName AnsibleRanorexTest -Principal $principal}
+    win_shell: $principal = New-ScheduledTaskPrincipal -UserID ranorexrt@atsna.atsauto.net -RunLevel Highest; Set-ScheduledTask -TaskName AnsibleRanorexTest -Principal $principal
   - name: RunRanorexCommand
     #win_command: schtasks.exe /Run /TN AnsibleRanorexTest
-    win_command: PowerShell -Command {Start-ScheduledTask -TaskName AnsibleRanorexTest}
+    win_shell: Start-ScheduledTask -TaskName AnsibleRanorexTest
   - pause:
       seconds: 30
   - name: DisableRanorexScheduledTask
