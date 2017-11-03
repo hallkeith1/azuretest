@@ -16,7 +16,7 @@
       name: AnsibleRanorexTest
       runlevel: highest
       store_password: false
-      executable: "{{ testexe }} {{ testparam }}"
+      executable: "{{ testexe }} {{ testparam }} 12345678"
       state: present
       frequency: once
       time: 12am
