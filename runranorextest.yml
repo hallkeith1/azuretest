@@ -16,8 +16,19 @@
       name: AnsibleRanorexTest
       runlevel: highest
       store_password: false
-      executable: "{{ testexe }} {{ testparam }} 12345678"
+      executable: "{{ testexe }} {{ testparam }}"
       state: present
       frequency: once
       time: 12am
       user: 'atsna\ranorexrt'
+    win_command: schtasks.exe /Run /TN AnsibleRanorexTest
+    win_scheduled_task:
+      name: AnsibleRanorexTest
+      runlevel: highest
+      store_password: false
+      executable: "{{ testexe }} {{ testparam }}"
+      state: present
+      frequency: once
+      time: 12am
+      user: 'atsna\ranorexrt'
+      enabled: false
