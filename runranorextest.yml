@@ -18,3 +18,4 @@
       store_password: false
       executable: "{{ testexe }} {{ testparam }}"
       state: present
+      frequency: once
