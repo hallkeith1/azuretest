@@ -24,6 +24,8 @@
       enabled: true
   - name: RunRanorexCommand
     win_command: schtasks.exe /Run /TN AnsibleRanorexTest
+  - pause:
+      seconds: 30
   - name: DisableRanorexScheduledTask
     win_scheduled_task:
       name: AnsibleRanorexTest
