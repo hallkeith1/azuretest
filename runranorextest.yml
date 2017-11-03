@@ -16,5 +16,5 @@
       name: AnsibleRanorexTest
       runlevel: highest
       store_password: false
-      executable: "{{ testexe }}"
+      executable: "{{ testexe }} {{ testparam }}"
       state: present
