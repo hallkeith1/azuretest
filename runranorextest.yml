@@ -21,12 +21,13 @@
       state: present
       frequency: once
       time: 12am
-      user: 'atsna\ranorexrt'
+      user: 'ranorexrt@atsna.atsauto.net'
       enabled: true
   - name: UpdateScheduledTask
-    win_command: schtasks.exe /Change /TN AnsibleRanorexTest /RL Highest
+    win_command: $principal = New-ScheduledTaskPrincipal -UserID ranorexrt@atsna.atsauto.net -RunLevel Highest; Set-ScheduledTask -TaskName AnsibleRanorexTest -Principal $principal
   - name: RunRanorexCommand
-    win_command: schtasks.exe /Run /TN AnsibleRanorexTest
+    #win_command: schtasks.exe /Run /TN AnsibleRanorexTest
+    win_command: Start-ScheduledTask -TaskName AnsibleRanorexTest
   - pause:
       seconds: 30
   - name: DisableRanorexScheduledTask
@@ -39,5 +40,5 @@
       state: present
       frequency: once
       time: 12am
-      user: 'atsna\ranorexrt'
+      user: 'ranorexrt@atsna.atsauto.net'
       enabled: false
