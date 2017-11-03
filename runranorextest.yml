@@ -19,3 +19,4 @@
       executable: "{{ testexe }} {{ testparam }}"
       state: present
       frequency: once
+      time: 12am
