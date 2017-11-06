@@ -2,3 +2,4 @@
 - name: Create a test user
   hosts: localhost
   tasks:
+    - name: Create a test user
