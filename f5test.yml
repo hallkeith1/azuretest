@@ -2,7 +2,7 @@
 - name: Test F5 playbook
   hosts: localhost
   tasks:
-    - name: Add the user 'johnd' as an admin
+    - name: Add the user johnd as an admin
       bigip_user:
           server: "{{ f5 }}"
           user: "{{ user }}"
