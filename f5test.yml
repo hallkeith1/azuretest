@@ -8,4 +8,5 @@
         user: "{{ user }}"
         password: "{{ password }}"
         hostname: "f5testing"
+        validate_certs: False
       delegate_to: localhost
