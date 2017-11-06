@@ -1,15 +1,11 @@
 ---
-- name: Create a test user
+- name: Test changing the F5 hostname
   hosts: localhost
   tasks:
-    - name: Create a test user
-      bigip_user:
+    - name: change the host name of the f5
+      bigip_hostname:
         server: "{{ f5 }}"
         user: "{{ user }}"
         password: "{{ password }}"
-        username_credential: "johnd"
-        password_credential: "password"
-        full_name: "John Doe"
-        partition_access: "all:admin"
-        update_password: "on_create"
-        state: "present"
+        hostname: "f5testing"
+      delegate_to: localhost
