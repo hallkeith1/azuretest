@@ -7,6 +7,6 @@
         server: "{{ f5 }}"
         user: "{{ user }}"
         password: "{{ password }}"
-        hostname: "f5testing"
+        hostname: "{{ newhostname }}"
         validate_certs: False
       delegate_to: localhost
